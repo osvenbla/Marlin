@@ -977,6 +977,8 @@ void lcd_quick_feedback(const bool clear_buttons) {
             SERIAL_ECHOLNPGM("5V");
           #else
             SERIAL_ECHOLNPGM("OD");
+          #endif
+        char mess[21];
         strcpy_P(mess, PSTR("BLTouch Mode - "));
         strcpy_P(&mess[15], bltouch_last_written_mode ? PSTR("5V") : PSTR("OD"));
         lcd_setalertstatusPGM(mess);

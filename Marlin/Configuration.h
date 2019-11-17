@@ -611,7 +611,7 @@
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 4000, 500 }
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 588, 588, 3000, 1135 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 636, 636, 3150, 1200 }
 
 
 /**
@@ -619,7 +619,7 @@
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 25 }
+#define DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 100 }
 
 /**
  * Default Max Acceleration (change/s) change = mm/s
@@ -978,7 +978,7 @@
 //#define AUTO_BED_LEVELING_LINEAR
 //#define AUTO_BED_LEVELING_BILINEAR
 //#define AUTO_BED_LEVELING_UBL
-//#define MESH_BED_LEVELING
+#define MESH_BED_LEVELING
 
 /**
  * Normally G28 leaves leveling disabled on completion. Enable
@@ -1276,7 +1276,7 @@
  *    P1  Raise the nozzle always to Z-park height.
  *    P2  Raise the nozzle by Z-park amount, limited to Z_MAX_POS.
  */
-//#define NOZZLE_PARK_FEATURE
+#define NOZZLE_PARK_FEATURE
 
 #if ENABLED(NOZZLE_PARK_FEATURE)
   // Specify a park position as { X, Y, Z }
@@ -1538,6 +1538,7 @@
 //
 //#define ULTIMAKERCONTROLLER
 #define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER
+#define ST7920_DELAY_1 DELAY_NS(0) 
 
 //
 // ULTIPANEL as seen on Thingiverse.
@@ -1812,7 +1813,7 @@
 // Use software PWM to drive the fan, as for the heaters. This uses a very low frequency
 // which is not as annoying as with the hardware PWM. On the other hand, if this frequency
 // is too low, you should also increment SOFT_PWM_SCALE.
-//#define FAN_SOFT_PWM
+#define FAN_SOFT_PWM
 
 // Incrementing this by 1 will double the software PWM frequency,
 // affecting heaters, and the fan if FAN_SOFT_PWM is enabled.
